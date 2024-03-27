@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cadastro de Cliente</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: linear-gradient(45deg, rgb(219, 13, 13), rgb(245, 241, 241));
+       
+       
+      }
+      div {
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 80px;
+        border-radius: 15px;
+        color: #fff;
+       
+      }
+      input {
+        padding: 15px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+       
+      }
+      #comentarios{
+        height: 150px; 
+            
+      }
+      .button {
+          background-color: dodgerblue;
+          border: none;
+          padding: 15px;
+          width: 200px; 
+          border-radius: 10px;
+          color: white;
+          font-size: 15px;
+      }
+      .button:hover {
+        background-color: deepskyblue;
+        cursor: pointer;
+      }
+      h2 {
+        text-align: center;
+      }
+      @media screen and (max-width: 1669px) and (max-height: 911px) {
+    div {
+      padding: 40px;
+    }
+    input,
+    textarea {
+      padding: 10px; 
+      font-size: 14px;
+    }
+    .button {
+      padding: 10px; 
+      font-size: 14px; 
+    }
+  }
+  @media screen and (max-width: 1200px) and (max-height: 720px) {
+    div {
+      padding: 40px; 
+    }
+    input,
+    textarea {
+      padding: 10px; 
+      font-size: 14px; 
+    }
+    .button {
+      padding: 10px; 
+      font-size: 14px; 
+    }
+  }
+  @media screen and (min-width: 1811px) {
+  #comentarios {
+    width: 100%; 
+   
+  }
+  .button {
+          width: 103%; 
+        }
+}
+    </style>
+  </head>
+  <body>
+    <div>
+    <h2>Cadastro</h2>
+    <form action="exibir_cadastro.php" method="POST">
+      <label for="nome">Nome:</label><br />
+      <input type="text" id="nome" name="nome" required /><br />
+
+      <label for="email">E-mail:</label><br />
+      <input type="email" id="email" name="email" required /><br />
+
+      <label for="telefone">Telefone:</label><br />
+      <input type="tel" id="telefone" name="telefone" /><br />
+
+      <p>Lista de Interesses:</p>
+      <input
+        type="checkbox"
+        id="interesse1"
+        name="interesses[]"
+        value="Tecnologia"
+      />
+      <label for="interesse1">Tecnologia</label><br />
+      <input
+        type="checkbox"
+        id="interesse2"
+        name="interesses[]"
+        value="Esportes"
+      />
+      <label for="interesse2">Esportes</label><br />
+      <input
+        type="checkbox"
+        id="interesse3"
+        name="interesses[]"
+        value="Música"
+      />
+      <label for="interesse3">Música</label><br />
+
+      <label for="comentarios">Comentários:</label><br />
+      <textarea id="comentarios" name="comentarios"></textarea><br />
+
+      <input class="button" type="submit" value="Enviar" />
+    </div>
+    </form>
+  </body>
+</html>
